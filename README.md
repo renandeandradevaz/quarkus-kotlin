@@ -1,7 +1,7 @@
 run:
 
 ```
-./mvnw compile quarkus:dev
+mvn compile quarkus:dev
 ```
 
 

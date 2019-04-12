@@ -1,17 +1,9 @@
 package org.acme.service
 
-import javax.enterprise.context.ApplicationScoped
-import javax.inject.Inject
-import javax.ws.rs.GET
-import javax.ws.rs.Path
-import javax.ws.rs.Produces
-import javax.ws.rs.core.MediaType
+import javax.inject.Singleton
 
-@ApplicationScoped
-open class GreetingService{
+@Singleton
+open class GreetingService constructor(val greetingService2: GreetingService2) {
 
-    @Inject
-    lateinit var greetingService2: GreetingService2
-
-    fun hello() = greetingService2.hello()
+	fun hello() = greetingService2.hello()
 }
